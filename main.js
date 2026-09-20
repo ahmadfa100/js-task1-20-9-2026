@@ -2,9 +2,8 @@ const userName = prompt("Enter you name");
 const userAge = prompt("Enter you age");
 const userGender = prompt("Enter you gender");
 
-male = true;
+let male = true;
 let valid = false;
-let userChoise;
 
 if (userGender == "Male") {
   console.log("welcome Mr. " + userName);
@@ -14,11 +13,19 @@ if (userGender == "Male") {
 } else document.write("welcome  " + userName);
 
 if (userAge >= 16) {
-  userChoise = prompt("Please enter one of them (Burger, Shawarma , Zinger) ");
-  if (userChoise == "Burger" ||userChoise == "Shawarma" ||userChoise == "Zinger") {
+  var userChoise = prompt(
+    "Please enter one of them (Burger, Shawarma , Zinger) ",
+  );
+  if (
+    userChoise == "Burger" ||
+    userChoise == "Shawarma" ||
+    userChoise == "Zinger"
+  ) {
     alert("Your order is being prepared");
     valid = true;
-  } else {alert(".Invalid order. Please try again");}
+  } else {
+    alert(".Invalid order. Please try again");
+  }
 }
 if (userAge >= 18 && valid) {
   alert("Order confirmed");
@@ -33,4 +40,5 @@ else {
 document.write("<h5>you gender is " + userGender + "</h5>");
 document.write("<h5>you age is " + userAge + "</h5>");
 document.write("<h5>you order is " + userChoise + "</h5>");
-document.write("<h5>you order status is " + valid + "</h5>");
+if (valid) document.write("<h5>you order status is not valid </h5>");
+else document.write("<h5>you order status is valid</h5>");
