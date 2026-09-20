@@ -7,9 +7,9 @@ let valid = false;
 let userChoise;
 
 if (userGender == "Male") {
-  document.write("welcome Mr. " + userName);
+  console.log("welcome Mr. " + userName);
 } else if (userGender == "Femal") {
-  document.write("welcome Ms. " + userName);
+  console.log("welcome Ms. " + userName);
   male = false;
 } else document.write("welcome  " + userName);
 
