@@ -2,7 +2,7 @@ const userName = prompt("Enter you name");
 const userAge = prompt("Enter you age");
 const userGender = prompt("Enter you gender");
 
-let male = true;
+male = true;
 let valid = false;
 let userChoise;
 
@@ -15,24 +15,16 @@ if (userGender == "Male") {
 
 if (userAge >= 16) {
   userChoise = prompt("Please enter one of them (Burger, Shawarma , Zinger) ");
-  if (
-    userChoise == "Burger" ||
-    userChoise == "Shawarma" ||
-    userChoise == "Zinger"
-  ) {
+  if (userChoise == "Burger" ||userChoise == "Shawarma" ||userChoise == "Zinger") {
     alert("Your order is being prepared");
     valid = true;
-  } else {
-    alert(".Invalid order. Please try again");
-  }
+  } else {alert(".Invalid order. Please try again");}
 }
-
 if (userAge >= 18 && valid) {
   alert("Order confirmed");
 } else if (userAge < 18 || !valid) {
   alert("Order requires verification");
 }
-
 if (male) document.write("<h3>Welcome Mr. " + userName + "</h3>");
 else {
   document.write("<h3>Welcome Ms. " + userName + "</h3>");
