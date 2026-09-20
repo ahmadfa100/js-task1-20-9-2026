@@ -1,40 +1,68 @@
-const userName = prompt("Enter you name");
-const userAge = prompt("Enter you age");
-const userGender = prompt("Enter you gender");
+const userName = prompt("Enter your name");
+const userAge = Number(prompt("Enter your age"));
+const userGender = prompt("Enter your gender (Male / Female)");
 
-male = true;
+let userChoise = "No order";
+let valid = false;
 
-if (userGender == "Male") {
-  console.write("welcome Mr. " + userName);
-} else if (userGender == "Femal") {
-  console.write("welcome Ms. " + userName);
-  male = false;
-} else console.write("welcome  " + userName);
+
+if (userGender === "Male") {
+
+    document.write("<h3>Welcome Mr. " + userName + "</h3>");
+
+} else if (userGender === "Female") {
+
+    document.write("<h3>Welcome Ms. " + userName + "</h3>");
+
+} else {
+
+    document.write("<h3>Welcome " + userName + "</h3>");
+
+}
+
 
 if (userAge >= 16) {
-  userChoise = prompt("Please enter one of them (Burger, Shawarma , Zinger) ");
-  if (
-    userChoise == "Burger" ||
-    userChoise == "Shawarma" ||
-    userChoise == "Zinger"
-  ) {
-    alert("Your order is being prepared");
-    valid = true;
-  } else {
-    alert(".Invalid order. Please try again");
-  }
-}
-if (userAge >= 18 && valid) {
-  alert("Order confirmed");
-} else if (userAge < 18 || !valid) {
-  alert("Order requires verification");
-}
-if (male) document.write("<h3>Welcome Mr. " + { userName } + "<h3/>");
-else {
-  document.write("<h3>Welcome Ms. " + { userName } + "<h3/>");
+
+    userChoise = prompt(
+        "Please enter one of them (Burger, Shawarma, Zinger)"
+    );
+
+    if (
+        userChoise === "Burger" ||
+        userChoise === "Shawarma" ||
+        userChoise === "Zinger"
+    ) {
+
+        alert("Your order is being prepared");
+
+        valid = true;
+
+    } else {
+
+        alert("Invalid order. Please try again");
+
+    }
+
+} else {
+
+    alert("You must be at least 16 years old to place an order");
+
 }
 
-document.write("<h5>you gender is " + userGender + "</h5>");
-document.write("<h5>you age is " + userAge + "</h5>");
-document.write("<h5>you order is " + userChoise + "</h5>");
-document.write("<h5>you order status is " + valid + "</h5>");
+if (userAge >= 18 && valid) {
+
+    alert("Order confirmed");
+
+} else {
+
+    alert("Order requires verification");
+
+}
+
+document.write("<h5>Your gender is: " + userGender + "</h5>");
+
+document.write("<h5>Your age is: " + userAge + "</h5>");
+
+document.write("<h5>Your order is: " + userChoise + "</h5>");
+
+document.write("<h5>Your order status is: " + valid + "</h5>");
