@@ -10,7 +10,7 @@ if (userGender == "Male") {
 } else if (userGender == "Femal") {
   console.log("welcome Ms. " + userName);
   male = false;
-} else document.write("welcome  " + userName);
+} else console.log("welcome  " + userName);
 
 if (userAge >= 16) {
   var userChoise = prompt(
