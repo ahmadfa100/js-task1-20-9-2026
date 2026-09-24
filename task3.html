@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="userName" />
+
+    <select id="userChoice">
+      <option value="Burger" class="choice">Burger</option>
+      <option value="Shawarma" class="choice">Shawarma</option>
+      <option value="Zinger" class="choice">Zinger</option>
+    </select>
+
+    <button
+      onclick="Display()"
+      id="submitButton"
+      onmouseover="changeColor()"
+      onmouseout="resetColor()"
+    >
+      Submit
+    </button>
+
+    <h3 id="toDisplay"></h3>
+
+    <script src="./Task3.js"></script>
+  </body>
+</html>

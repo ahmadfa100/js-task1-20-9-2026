@@ -7,8 +7,9 @@ let food = [
 ];
 
 function showMenu() {
+  document.write("foods we have" + "<br>");
   for (let i = 0; i < food.length; i++) {
-    document.write("Menu : ", food[i].name + " -- ");
+    document.write(i + 1 + " - " + food[i].name);
   }
 }
 
@@ -38,6 +39,7 @@ while (true) {
 
   test();
 
+  document.write("<br>");
   if (flag) {
     for (const prop in selectedFood) {
       document.write(prop + ": " + selectedFood[prop] + "<br>");
